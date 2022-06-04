@@ -82,8 +82,7 @@
         <!-- ============================================================== -->
         <!-- end navbar -->
         <!-- ============================================================== -->
-
-
+        
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
@@ -134,7 +133,7 @@
                                 <div id="submenu-4" class="collapse submenu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="admin_reg.html">Result Register</a>
+                                            <a class="nav-link" href="admin_reg.php">Result Register</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="admin_stat.html">Result Satictis</a>
@@ -144,7 +143,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="admin_form.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Firing Form</a>
+                                <a class="nav-link" href="admin_form.php" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Firing Form</a>
                             </li>
                         </ul>
                     </div>
@@ -162,36 +161,33 @@
         <div class="dashboard-wrapper">
             <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
-                    
-                    <!-- ============================================================== -->
-                    <!-- pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="page-header">
-                                <h2 class="pageheader-title">Virtual Kill House System</h2>
-                                
-                                <div class="page-breadcrumb">
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Virtual Kill House Firing</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Form</li>
-                                        </ol>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ============================================================== -->
-                    <!-- end pageheader  -->
-                    <!-- ============================================================== -->
-
-
-                                
-                        
+                    <form name="frmContact" class="needs-validation " method="post" action="contact.php">
+                        <p>
+                          <label for="Name">Your Name </label>
+                          <input type="text" class="form-control" name="txtName" id="txtName" placeholder="Name" value="" required>
+                          <div class="invalid-feedback">
+                                      Valid first name is required.
+                                    </div>
+                        </p>
+                        <p>
+                          <label for="email">Your Email</label>
+                          <input type="text"  class="form-control"  name="txtEmail" id="txtEmail" placeholder="Email" value="" required>
+                        </p>
+                        <p>
+                          <label for="phone">Your Phone</label>
+                          <input type="text"  class="form-control" name="txtPhone" id="txtPhone" placeholder="Phone" value="" required>
+                        </p>
+                        <p>
+                          <label for="message">Message</label>
+                          <textarea name="txtMessage" class="form-control"  id="txtMessage"  placeholder="Message" required></textarea>
+                        </p>
+                        <p>&nbsp;</p>
+                        <p>
+                          <input type="submit" name="Submit" id="Submit" value="Click me to Contact"  class="btn btn-primary btn-lg btn-block">
+                        </p>
+                      </form>  
                 </div>
-            
-
+            </div>
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
@@ -201,7 +197,7 @@
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <a>Copyright © IDP_gp6</a>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">
                                 <a href="javascript: void(0);">About</a>
                                 <a href="javascript: void(0);">Support</a>
@@ -223,11 +219,12 @@
 
 
     </div>
+
     <!-- ============================================================== -->
     <!-- end main wrapper  -->
     <!-- ============================================================== -->
 
-
+    
 
     <!-- Optional JavaScript -->
     <!-- jquery 3.3.1 -->
