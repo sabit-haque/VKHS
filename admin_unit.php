@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <title>VKHS - Virtual Kill house System</title>
-    <link rel="stylesheet" href="assets/vendor/select2/css/select2.css">
-    <link rel="stylesheet" href="assets/vendor/summernote/css/summernote-bs4.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
 </head>
 
 <body>
@@ -172,89 +169,82 @@
         <!-- end left sidebar -->
         <!-- ============================================================== -->
 
+
         <!-- ============================================================== -->
         <!-- wrapper  -->
         <!-- ============================================================== -->
         <div class="dashboard-wrapper">
-            <div class="container-fluid">
-                <aside class="page-aside">
-                    <div class="aside-content">
-                        <div class="aside-header">
-                            <button class="navbar-toggle" data-target=".aside-nav" data-toggle="collapse" type="button"><span class="icon"><i class="fas fa-caret-down"></i></span></button><span class="title">NOTICEBOARD</span>
-                            <p class="description">VKHS Noticeboard</p>
-                        </div>
-                        <div class="aside-compose"><a class="btn btn-lg btn-secondary btn-block" href="admin_comp.html">Compose New Notice</a></div>
-                        <div class="aside-nav collapse">
-                            <ul class="nav">
-                                <li><a href="admin_nb.html"><span class="icon"><i class="fas fa-fw fa-inbox"></i></span>Inbox<span class="badge badge-primary float-right">8</span></a></li>
-                                <li class="active"><a href="admin_comp.html"><span class="icon"><i class="fas fa-fw  fa-envelope"></i></span>Send Notice</a></li>
-                                <li><a href="#"><span class="icon"><i class="fas fa-fw fa-briefcase"></i></span>Important<span class="badge badge-secondary float-right">4</span></a></li>
-                                <li><a href="#"><span class="icon"><i class="fas fa-fw fa-file"></i></span>Drafts</a></li>
-                                <li><a href="#"><span class="icon"><i class="fas fa-fw fa-star"></i></span>Tags</a></li>
-                                <li><a href="#"><span class="icon"><i class="fas fa-fw fa-trash"></i></span>Trash</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-                <div class="main-content container-fluid p-0">
-                    <div class="email-head">
-                        <div class="email-head-title">Compose New Notice<span class="icon mdi mdi-edit"></span></div>
-                    </div>
-                    <div class="email-compose-fields">
-                        <div class="to">
-                            <div class="form-group row pt-0">
-                                <label class="col-md-1 control-label">Act:</label>
-                                <div class="col-md-11">
-                                    <select class="js-example-basic-multiple" multiple="multiple">
-                                        <option value="9 Sig Bn" selected="selected">9 Sig Bn</option>
-                                        <option value="6 Engr Bn">6 Engr Bn</option>
-                                        <option value="4 EB">4 EB</option>
-                                        <option value="14 EB" selected="selected">14 EB</option>
-                                        <option value="4 BIR" selected="selected">4 BIR</option>
-                                        <option value="14 BIR">14 BIR</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="to cc">
-                            <div class="form-group row pt-2">
-                                <label class="col-md-1 control-label">Info:</label>
-                                <div class="col-md-11">
-                                    <select class="js-example-basic-multiple" multiple="multiple">
-                                        <option value="Div HQ" selected="selected">Div HQ</option>
-                                        <option value="Area HQ" selected="selected">Area HQ</option>
-                                        <option value="Sta HQ" selected="selected">Sta HQ</option>
-                                        <option value="149 EME">149 EME</option>
-                                        <option value="169 EME">169 EME</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="subject">
-                            <div class="form-group row pt-2">
-                                <label class="col-md-1 control-label">Subject</label>
-                                <div class="col-md-11">
-                                    <input class="form-control" type="text">
-                                </div>
+            <div class="container-fluid dashboard-content">
+                <!-- ============================================================== -->
+                <!-- pageheader -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="page-header">
+                            <h2 class="pageheader-title">FORMATION</h2>
+                            <p class="pageheader-text">.</p>
+                            <div class="page-breadcrumb">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Division</a></li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Brigade</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Unit List</li>
+                                    </ol>
+                                </nav>
                             </div>
                         </div>
                     </div>
-                    <div class="email editor">
-                        <div class="col-md-12 p-0">
-                            <div class="form-group">
-                                <label class="control-label sr-only" for="summernote">Descriptions </label>
-                                <textarea class="form-control" id="summernote" name="editordata" rows="6" placeholder="Write Descriptions"></textarea>
-                            </div>
-                        </div>
-                        <div class="email action-send">
-                            <div class="col-md-12 ">
-                                <div class="form-group">
-                                    <button class="btn btn-primary btn-space" type="submit"><i class="icon s7-mail"></i> Send</button>
-                                    <button class="btn btn-secondary btn-space" type="button"><i class="icon s7-close"></i> Cancel</button>
+                </div>
+                <!-- ============================================================== -->
+                <!-- end pageheader -->
+                <!-- ============================================================== -->
+                <div class="dashboard-short-list">
+                    <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- nestable list  -->
+                    <!-- ============================================================== -->
+                    <div>
+                        <div>
+                            <section class="card card-fluid">
+                                <h5 class="card-header drag-handle"> Unit List </h5>
+                                <div class="dd" id="nestable">
+                                    <ol class="dd-list">
+                                        <?php
+                                            $servername = "localhost";
+                                            $username = "root";
+                                            $password = "";
+                                            $database = "vkhs_ver3";
+                    
+                                             // create a connection
+                                            $conn = mysqli_connect($servername, $username, $password, $database);
+                                            $sql = 'SELECT * FROM `unit`';
+                                            $result = mysqli_query($conn, $sql);
+                                            $num = mysqli_num_rows($result);
+                                            if($num > 0) {
+                                                while($row = mysqli_fetch_assoc($result)) {
+                                                    echo '<li class="dd-item" data-id="4">
+                                                        <div class="dd-handle"> <span class="drag-indicator"></span>
+                                                            <div>'. $row["u_name"] .'&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </div>
+                                                            <div class="dd-nodrag btn-group ml-auto">
+                                                                <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                                <button class="btn btn-sm btn-outline-light">
+                                                                    <i class="far fa-trash-alt"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </li>';
+                                                }
+                                            }
+                                        ?>
+                                    </ol>
                                 </div>
-                            </div>
+                            </section>
                         </div>
+
                     </div>
+                    <!-- ============================================================== -->
+                    <!-- end nestable list  -->
+                    <!-- ============================================================== -->
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -264,7 +254,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        
+                            <a>Copyright © IDP_gp6</a>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">
@@ -286,7 +276,8 @@
     <!-- ============================================================== -->
 
 
-    <!-- Optional JavaScript --> 
+
+    <!-- Optional JavaScript -->
     <!-- jquery 3.3.1 -->
     <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <!-- bootstap bundle js -->
@@ -307,26 +298,6 @@
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
-    
-    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <script src="assets/vendor/select2/js/select2.min.js"></script>
-    <script src="assets/vendor/summernote/js/summernote-bs4.js"></script>
-    <script src="assets/libs/js/main-js.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('.js-example-basic-multiple').select2({ tags: true });
-    });
-    </script>
-    <script>
-    $(document).ready(function() {
-        $('#summernote').summernote({
-            height: 300
-
-        });
-    });
-    </script>
 </body>
  
 </html>

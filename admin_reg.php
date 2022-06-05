@@ -101,7 +101,14 @@
                             </li>
                             
                             <li class="nav-item ">
-                                <a class="nav-link active" href="admin_db.html" data-toggle="collapse" aria-expanded="false" ><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+                                <div id="submenu-1" class="collapse submenu">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="admin_db.html">User</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             
                             <li class="nav-item">
@@ -123,7 +130,7 @@
                                 <div id="submenu-3" class="collapse submenu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="admin_unit.html">Unit List</a>
+                                            <a class="nav-link" href="admin_unit.php">Unit List</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -143,8 +150,15 @@
                                 </div>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="admin_form.php" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Firing Form</a>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Firing Form</a>
+                                <div id="submenu-5" class="collapse submenu">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="admin_form.php">Form Details</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </div>
