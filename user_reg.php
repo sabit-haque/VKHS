@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <title>VKHS - Virtual Kill house System</title>
-    <link rel="stylesheet" href="assets/vendor/select2/css/select2.css">
-    <link rel="stylesheet" href="assets/vendor/summernote/css/summernote-bs4.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
 </head>
 
 <body>
@@ -158,7 +155,7 @@
                                 <div id="submenu-5" class="collapse submenu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="user_form.html">Form Details</a>
+                                            <a class="nav-link" href="user_form.php">Form Details</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -178,80 +175,169 @@
         <!-- wrapper  -->
         <!-- ============================================================== -->
         <div class="dashboard-wrapper">
-            <div class="container-fluid">
-                <aside class="page-aside">
-                    <div class="aside-content">
-                        <div class="aside-header">
-                            <button class="navbar-toggle" data-target=".aside-nav" data-toggle="collapse" type="button"><span class="icon"><i class="fas fa-caret-down"></i></span></button><span class="title">NOTICEBOARD</span>
-                            <p class="description">VKHS Noticeboard</p>
-                        </div>
-                        <div class="aside-compose"><a class="btn btn-lg btn-secondary btn-block" href="user_comp.html">Compose New Report</a></div>
-                        <div class="aside-nav collapse">
-                            <ul class="nav">
-                                <li><a href="user_nb.html"><span class="icon"><i class="fas fa-fw fa-inbox"></i></span>Inbox<span class="badge badge-primary float-right">8</span></a></li>
-                                <li class="active"><a href="user_comp.html"><span class="icon"><i class="fas fa-fw  fa-envelope"></i></span>Send Report</a></li>
-                                <li><a href="#"><span class="icon"><i class="fas fa-fw fa-briefcase"></i></span>Important<span class="badge badge-secondary float-right">4</span></a></li>
-                                <li><a href="#"><span class="icon"><i class="fas fa-fw fa-file"></i></span>Drafts</a></li>
-                                <li><a href="#"><span class="icon"><i class="fas fa-fw fa-star"></i></span>Tags</a></li>
-                                <li><a href="#"><span class="icon"><i class="fas fa-fw fa-trash"></i></span>Trash</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-                <div class="main-content container-fluid p-0">
-                    <div class="email-head">
-                        <div class="email-head-title">Compose New Report<span class="icon mdi mdi-edit"></span></div>
-                    </div>
-                    <div class="email-compose-fields">
-                        <div class="to">
-                            <div class="form-group row pt-0">
-                                <label class="col-md-1 control-label">Act:</label>
-                                <div class="col-md-11">
-                                    <select class="js-example-basic-multiple" multiple="multiple">
-                                        <option value="Div HQ" selected="selected">Div HQ</option>
-                                        <option value="Area HQ">Area HQ</option>
-                                        <option value="Sta HQ">Sta HQ</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="to cc">
-                            <div class="form-group row pt-2">
-                                <label class="col-md-1 control-label">Info:</label>
-                                <div class="col-md-11">
-                                    <select class="js-example-basic-multiple" multiple="multiple">
-                                        <option value="Div HQ">Div HQ</option>
-                                        <option value="Area HQ" selected="selected">Area HQ</option>
-                                        <option value="Sta HQ" selected="selected">Sta HQ</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="subject">
-                            <div class="form-group row pt-2">
-                                <label class="col-md-1 control-label">Subject</label>
-                                <div class="col-md-11">
-                                    <input class="form-control" type="text">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">Virtual Kill House System</h2>
+                                <div>
+                                    <div class="page-breadcrumb">
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Result</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Kill House Firing Result Register</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                    <div class="main-content container-fluid p-0" class="col-lg-6">
+                                        <div class="email-search">
+                                            <div class="input-group input-search">
+                                                <input class="form-control" type="text" placeholder="Search in Result Register..."><span class="input-group-btn">
+                                            <button class="btn btn-secondary" type="button"><i class="fas fa-search"></i></button></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="email editor">
-                        <div class="col-md-12 p-0">
-                            <div class="form-group">
-                                <label class="control-label sr-only" for="summernote">Descriptions </label>
-                                <textarea class="form-control" id="summernote" name="editordata" rows="6" placeholder="Write Descriptions"></textarea>
-                            </div>
-                        </div>
-                        <div class="email action-send">
-                            <div class="col-md-12 ">
-                                <div class="form-group">
-                                    <button class="btn btn-primary btn-space" type="submit"><i class="icon s7-mail"></i> Send</button>
-                                    <button class="btn btn-secondary btn-space" type="button"><i class="icon s7-close"></i> Cancel</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+
+
+                                
+                    <div>
+                        <?php
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $database = "vkhs_ver3";
+
+                                // create a connection
+                            $conn = mysqli_connect($servername, $username, $password, $database);
+                            $sql = 'SELECT * FROM `killing_house` ';
+                            $result = mysqli_query($conn, $sql);
+                            $num = mysqli_num_rows($result);
+                            if($num > 0) {
+                                while($row = mysqli_fetch_assoc($result)) {
+                                    // echo var_dump($row);
+                                    echo '<div class="page-breadcrumb">
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Date and Time</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">' . $row["datetime"]. '</li>
+                                            </ol>
+                                        </nav>
+                                    </div>';
+                                    $sql = "SELECT * FROM `soldiers` WHERE `soldier_id` LIKE '$row[firing_officer]'";
+                                    $res = mysqli_query($conn, $sql);
+                                    $firing_officier = mysqli_fetch_assoc($res);
+                                    echo '<div class="page-breadcrumb">
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Firing Officer</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">' . $firing_officier["name"].' , ' . $firing_officier["S_u_id"] . '</li>
+                                            </ol>
+                                        </nav>
+                                    </div>';
+                                    $sql = "SELECT * FROM `soldiers` WHERE `soldier_id` LIKE '$row[first_s_id]'";
+                                    $res = mysqli_query($conn, $sql);
+                                    $first_s = mysqli_fetch_assoc($res);
+                                    $sql = "SELECT * FROM `soldiers` WHERE `soldier_id` LIKE '$row[second_s_id]'";
+                                    $res = mysqli_query($conn, $sql);
+                                    $second_s = mysqli_fetch_assoc($res);
+                                    $sql = "SELECT * FROM `soldiers` WHERE `soldier_id` LIKE '$row[third_s_id]'";
+                                    $res = mysqli_query($conn, $sql);
+                                    $third_s = mysqli_fetch_assoc($res);
+                                    $sql = "SELECT * FROM `soldiers` WHERE `soldier_id` LIKE '$row[fourth_s_id]'";
+                                    $res = mysqli_query($conn, $sql);
+                                    $fourth_s = mysqli_fetch_assoc($res);
+                                    $sql = "SELECT * FROM `soldiers` WHERE `soldier_id` LIKE '$row[fifth_s_id]'";
+                                    $res = mysqli_query($conn, $sql);
+                                    $fifth_s = mysqli_fetch_assoc($res);
+                                    $sql = "SELECT * FROM `soldiers` WHERE `soldier_id` LIKE '$row[sixth_s_id]'";
+                                    $res = mysqli_query($conn, $sql);
+                                    $sixth_s = mysqli_fetch_assoc($res);
+                                    echo '<table class="table">
+                                        <thead>
+                                            <tr>
+                                            <th>Pers No</th>
+                                            <th>Rank</th>
+                                            <th>Name</th>
+                                            <th>Prac</th>
+                                            <th>Hit</th>
+                                            <th>Missed</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                    <td data-label="Pers No">'.$row["first_s_id"].'</td>
+                                                    <td data-label="Rank">'.$first_s["rank"].'</td>
+                                                    <td data-label="Name">'.$first_s["name"].'</td>
+                                                    <td data-label="Prac">'.$row["first_s_prac"].'</td>
+                                                    <td data-label="Hit">'.$row["first_s_hit"].'</td>
+                                                <td data-label="Missed">'.($row["first_s_prac"]-$row["first_s_hit"]).'</td>
+                                            </tr>
+                                
+                                            <tr>
+                                                <td data-label="Pers No">'.$row["second_s_id"].'</td>
+                                                <td data-label="Rank">'.$second_s["rank"].'</td>
+                                                <td data-label="Name">'.$second_s["name"].'</td>
+                                                <td data-label="Prac">'.$row["second_s_prac"].'</td>
+                                                <td data-label="Hit">'.$row["second_s_hit"].'</td>
+                                                <td data-label="Missed">'.($row["second_s_prac"]-$row["second_s_hit"]).'</td>
+                                            </tr>
+                                
+                                            <tr>
+                                                <td data-label="Pers No">'.$row["third_s_id"].'</td>
+                                                <td data-label="Rank">'.$third_s["rank"].'</td>
+                                                <td data-label="Name">'.$third_s["name"].'</td>
+                                                <td data-label="Prac">'.$row["third_s_prac"].'</td>
+                                                <td data-label="Hit">'.$row["third_s_hit"].'</td>
+                                                <td data-label="Missed">'.($row["third_s_prac"]-$row["third_s_hit"]).'</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Pers No">'.$row["fourth_s_id"].'</td>
+                                                <td data-label="Rank">'.$fourth_s["rank"].'</td>
+                                                <td data-label="Name">'.$fourth_s["name"].'</td>
+                                                <td data-label="Prac">'.$row["fourth_s_prac"].'</td>
+                                                <td data-label="Hit">'.$row["fourth_s_hit"].'</td>
+                                            <td data-label="Missed">'.($row["fourth_s_prac"]-$row["fourth_s_hit"]).'</td>
+                                        </tr>
+                            
+                                        <tr>
+                                            <td data-label="Pers No">'.$row["fifth_s_id"].'</td>
+                                            <td data-label="Rank">'.$fifth_s["rank"].'</td>
+                                            <td data-label="Name">'.$fifth_s["name"].'</td>
+                                            <td data-label="Prac">'.$row["fifth_s_prac"].'</td>
+                                            <td data-label="Hit">'.$row["fifth_s_hit"].'</td>
+                                            <td data-label="Missed">'.($row["fifth_s_prac"]-$row["fifth_s_hit"]).'</td>
+                                        </tr>
+                            
+                                        <tr>
+                                            <td data-label="Pers No">'.$row["sixth_s_id"].'</td>
+                                            <td data-label="Rank">'.$sixth_s["rank"].'</td>
+                                            <td data-label="Name">'.$sixth_s["name"].'</td>
+                                            <td data-label="Prac">'.$row["sixth_s_prac"].'</td>
+                                            <td data-label="Hit">'.$row["sixth_s_hit"].'</td>
+                                            <td data-label="Missed">'.($row["sixth_s_prac"]-$row["sixth_s_hit"]).'</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                        
+                                    </table>';
+                                    echo '<div class="page-breadcrumb"><nav aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav></div>';
+
+                                }
+                            }
+                        ?>
+                    </div>                                    
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -261,9 +347,9 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        
+                            <a>Copyright © IDP_gp6</a>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">
                                 <a href="javascript: void(0);">About</a>
                                 <a href="javascript: void(0);">Support</a>
@@ -276,10 +362,17 @@
             <!-- ============================================================== -->
             <!-- end footer -->
             <!-- ============================================================== -->
+
+
         </div>
+        <!-- ============================================================== -->
+        <!-- end wrapper  -->
+        <!-- ============================================================== -->
+
+
     </div>
     <!-- ============================================================== -->
-    <!-- end main wrapper -->
+    <!-- end main wrapper  -->
     <!-- ============================================================== -->
 
 
@@ -305,26 +398,6 @@
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
-
-    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <script src="assets/vendor/select2/js/select2.min.js"></script>
-    <script src="assets/vendor/summernote/js/summernote-bs4.js"></script>
-    <script src="assets/libs/js/main-js.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('.js-example-basic-multiple').select2({ tags: true });
-    });
-    </script>
-    <script>
-    $(document).ready(function() {
-        $('#summernote').summernote({
-            height: 300
-
-        });
-    });
-    </script>
 </body>
  
 </html>

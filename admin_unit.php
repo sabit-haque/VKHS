@@ -203,6 +203,7 @@
                     <!-- ============================================================== -->
                     <!-- nestable list  -->
                     <!-- ============================================================== -->
+                   
                     <div>
                         <div>
                             <section class="card card-fluid">
@@ -214,6 +215,7 @@
                                             $username = "root";
                                             $password = "";
                                             $database = "vkhs_ver3";
+                                            $unit_id = "";
                     
                                              // create a connection
                                             $conn = mysqli_connect($servername, $username, $password, $database);
@@ -222,11 +224,14 @@
                                             $num = mysqli_num_rows($result);
                                             if($num > 0) {
                                                 while($row = mysqli_fetch_assoc($result)) {
+                                                    $unit_id = $row["unit_id"];
                                                     echo '<li class="dd-item" data-id="4">
                                                         <div class="dd-handle"> <span class="drag-indicator"></span>
                                                             <div>'. $row["u_name"] .'&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </div>
                                                             <div class="dd-nodrag btn-group ml-auto">
-                                                                <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                                <form action="admin_unit.php" method = "post">
+                                                                <button class="btn btn-sm btn-outline-light" name = "edit">Edit </button>
+                                                            </form>
                                                                 <button class="btn btn-sm btn-outline-light">
                                                                     <i class="far fa-trash-alt"></i>
                                                                 </button>
@@ -247,6 +252,7 @@
                     <!-- ============================================================== -->
                 </div>
             </div>
+            
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
@@ -298,6 +304,9 @@
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+    
 </body>
+
  
 </html>
+
