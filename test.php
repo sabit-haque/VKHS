@@ -207,38 +207,69 @@
 
                                 <div class="dd" id="nestable">
                                     <ol class="dd-list">
+                                        <?php
+                                            $servername = "localhost";
+                                            $username = "root";
+                                            $password = "";
+                                            $database = "vkhs_ver3";
+                    
+                                             // create a connection
+                                            $conn = mysqli_connect($servername, $username, $password, $database);
+                                            $sql = 'SELECT * FROM `unit`';
+                                            $result = mysqli_query($conn, $sql);
+                                            $num = mysqli_num_rows($result);
+                                            if($num > 0) {
+                                                while($row = mysqli_fetch_assoc($result)) {
+                                                    echo '
+                                                    <li class="dd-item" data-id="2">
+                                                        <div class="dd-handle"> <span class="drag-indicator"></span>
+                                                            <div>';
+                                                    
+                                                    echo $row["u_name"];       
 
-
-                                        <li class="dd-item" data-id="2">
-                                            <div class="dd-handle"> <span class="drag-indicator"></span>
-                                                <div> Div HQ</div>
-                                                <div class="dd-nodrag btn-group ml-auto">
-                                                    <form action="hello.php" method="post">
-                                                        <input class="form-control me-2" type="search" placeholder="New name" aria-label="Search" style="width: 120px;">
-                                                    </form>
-                                                    <button class="btn btn-sm btn-outline-light" style="margin-left: 20px;">Edit</button>
-                                                    <button class="btn btn-sm btn-outline-light">
-                                                        <i class="far fa-trash-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <ol class="dd-list">
-                                                <li class="dd-item" data-id="4">
-                                                    <div class="dd-handle"> <span class="drag-indicator"></span>
-                                                        <div> 4 Armd Bn </div>
-                                                        <div class="dd-nodrag btn-group ml-auto">
-                                                            <form action="hello.php" method="post">
-                                                                <input class="form-control me-2" type="search" placeholder="New name" aria-label="Search" style="width: 120px;">
-                                                            </form>
-                                                            <button class="btn btn-sm btn-outline-light" style="margin-left: 20px;">Edit</button>
-                                                            <button class="btn btn-sm btn-outline-light">
-                                                                <i class="far fa-trash-alt"></i>
-                                                            </button>
+                                                            
+                                                    echo '</div>
+                                                            <div class="dd-nodrag btn-group ml-auto">
+                                                                <form action="hello.php" method="post">
+                                                                    <input class="form-control me-2" type="search" placeholder="" aria-label="Search" style="width: 120px;">
+                                                                </form>
+                                                                <button class="btn btn-sm btn-outline-light" style="margin-left: 20px;">Edit</button>
+                                                                <button class="btn btn-sm btn-outline-light">
+                                                                    <i class="far fa-trash-alt"></i>
+                                                                </button>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </li>
-                                            </ol>
-                                        </li>
+                                                        <ol class="dd-list">';
+                                                    
+                                                    $sql = "select distinct `squad_name`from soldiers where `s_u_id` = '$row[unit_id]'";
+                                                    $res = mysqli_query($conn, $sql);
+                                                    $numm = mysqli_num_rows($res);
+                                                    if($numm > 0) {
+                                                        while($roww = mysqli_fetch_assoc($res)) {
+                                                        
+                                                            echo '<li class="dd-item" data-id="4">
+                                                                    <div class="dd-handle"> <span class="drag-indicator"></span>
+                                                                        <div>' .$roww['squad_name']. '</div>
+                                                                        <div class="dd-nodrag btn-group ml-auto">
+                                                                            <form action="hello.php" method="post">
+                                                                                <input class="form-control me-2" type="search" placeholder="" aria-label="Search" style="width: 120px;">
+                                                                            </form>
+                                                                            <button class="btn btn-sm btn-outline-light" style="margin-left: 20px;">Edit</button>
+                                                                            <button class="btn btn-sm btn-outline-light">
+                                                                                <i class="far fa-trash-alt"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            ';
+                                                        }
+                                                    }
+                                                    echo '</ol>
+                                                    </li>';
+                                                }
+                                            }
+                                        ?>
+                                        
                                     </ol>
                                 </div>
                             </section>
