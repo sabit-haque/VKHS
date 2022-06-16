@@ -155,7 +155,7 @@
                                 <div id="submenu-5" class="collapse submenu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="admin_form.php">Form Details</a>
+                                            <a class="nav-link" href="admin_form.html">Form Details</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -198,16 +198,13 @@
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
-                <div class="dashboard-short-list">
-                    <div class="row">
+                <div class="dashboard-short-list col-lg-6 col-md-12" >
                     <!-- ============================================================== -->
                     <!-- nestable list  -->
                     <!-- ============================================================== -->
-                   
-                    <div>
-                        <div>
                             <section class="card card-fluid">
                                 <h5 class="card-header drag-handle"> Unit List </h5>
+
                                 <div class="dd" id="nestable">
                                     <ol class="dd-list">
                                         <?php
@@ -215,7 +212,6 @@
                                             $username = "root";
                                             $password = "";
                                             $database = "vkhs_ver3";
-                                            $unit_id = "";
                     
                                              // create a connection
                                             $conn = mysqli_connect($servername, $username, $password, $database);
@@ -224,23 +220,61 @@
                                             $num = mysqli_num_rows($result);
                                             if($num > 0) {
                                                 while($row = mysqli_fetch_assoc($result)) {
-                                                    $unit_id = $row["unit_id"];
-                                                    echo '<li class="dd-item" data-id="4">
+                                                    echo '
+                                                    <li class="dd-item" data-id="2">
                                                         <div class="dd-handle"> <span class="drag-indicator"></span>
-                                                            <div>'. $row["u_name"] .'&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </div>
+                                                            <div>';
+                                                    
+                                                    echo $row["u_name"];       
+
+                                                            
+                                                    echo '</div>
                                                             <div class="dd-nodrag btn-group ml-auto">
-                                                                <form action="admin_unit.php" method = "post">
-                                                                <button class="btn btn-sm btn-outline-light" name = "edit">Edit </button>
-                                                            </form>
-                                                                <button class="btn btn-sm btn-outline-light">
-                                                                    <i class="far fa-trash-alt"></i>
-                                                                </button>
+                                                                    <form action="hello.php" method="post" style="display:flex;flex-direction: row;">
+                                                                        <input type="text" id="edit" class="form-control me-2" style="width: 120px;"/>
+                                                                        <button class="btn btn-sm btn-outline-light float-right" >Edit</button>
+                                                                    </form>
+                                                                    <form action="hello.php" method="post">
+                                                                        <button class="btn btn-sm btn-outline-light"><i class="far fa-trash-alt"></i></button>
+                                                                    </form>
                                                             </div>
                                                         </div>
+                                                        <ol class="dd-list">';
+                                                    
+                                                    $sql = "select  distinct `squad_name`from soldiers where `s_u_id` = '$row[unit_id]'";
+                                                    $res = mysqli_query($conn, $sql);
+                                                    $numm = mysqli_num_rows($res);
+                                                    if($numm > 0) {
+                                                        while($roww = mysqli_fetch_assoc($res)) {
+                                                        
+                                                            echo '<li class="dd-item" data-id="4">
+                                                                    <div class="dd-handle"> <span class="drag-indicator"></span>
+                                                                        <div>' .$roww['squad_name']. '</div>
+                                                                        <div class="dd-nodrag btn-group ml-auto">
+                                                                            <form action="hello.php" method="post" style="display:flex;flex-direction: row;">
+                                                                                <input type="text" id="edit" class="form-control me-2" style="width: 120px;" value="'.$row['unit_id'].' '.$roww['squad_name'].' 1'. '" name="edit" />
+                                                                                <button class="btn btn-sm btn-outline-light float-right" >Edit</button>
+                                                                            </form>
+                                                                            <form action="hello.php" method="post">
+                                                                                <button class="btn btn-sm btn-outline-light">
+                                                                                    <i class="far fa-trash-alt"></i>
+                                                                                </button>
+                                                                            </form>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            ';
+                                                        }
+                                                        // <input class="form-control me-2" type="search" placeholder="" aria-label="Search" style="width: 120px;">
+                                                        // <button class="btn btn-sm btn-outline-light float-right" >Edit</button>
+                                                    }
+                                                    echo '</ol>
                                                     </li>';
                                                 }
                                             }
                                         ?>
+                                        
                                     </ol>
                                 </div>
                             </section>
@@ -252,7 +286,6 @@
                     <!-- ============================================================== -->
                 </div>
             </div>
-            
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
@@ -304,9 +337,6 @@
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
-    
 </body>
-
  
 </html>
-
